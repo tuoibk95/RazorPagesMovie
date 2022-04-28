@@ -1,4 +1,4 @@
-using Microsoft.AspNetCore.Hosting;
+﻿using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
@@ -32,6 +32,7 @@ namespace RazorPagesMovie
         }
 
         public static IHostBuilder CreateHostBuilder(string[] args) =>
+            // Tạo ra một web server và mặc định đăng ký kestrel làm default (map là routing engine
             Host.CreateDefaultBuilder(args)
                 .ConfigureWebHostDefaults(webBuilder =>
                 {
